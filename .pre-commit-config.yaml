@@ -1,0 +1,19 @@
+%YAML 1.2
+# yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
+---
+default_install_hook_types:
+  - pre-commit
+
+default_stages:
+  - commit
+
+fail_fast: true
+
+repos:
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.0.0-alpha.5
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          - prettier@3.0.0-alpha.5
+          - eslint-config-prettier
